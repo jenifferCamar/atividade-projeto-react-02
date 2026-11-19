@@ -1,29 +1,33 @@
 ﻿# Projeto React 02 — Aula 09
 
-**Repositório:** `atividade-projeto-react-02`  
-**Disciplina:** Frameworks Front-end — SENAI
+**Disciplina:** Frameworks Front-end — SENAI  
+**Repositório:** [atividade-projeto-react-02](https://github.com/jenifferCamar/atividade-projeto-react-02)  
+**Deploy (Vercel):** https://atividade-projeto-react-02.vercel.app
 
-Aplicação React (Vite) desenvolvida para a Aula 09 (Projeto React 02), dando continuidade ao Projeto React 01.
+Aplicação React (Vite) desenvolvida para a Aula 09 (Projeto React 02), dando continuidade ao Projeto React 01. Implementa um **gerenciador de tarefas** com estado, eventos, formulário controlado, efeitos e persistência local.
 
-## Objetivo
-Aplicar conceitos de estado, eventos, formulários controlados, efeitos e integração com dados em uma interface React.
+## Funcionalidades
+- Cadastrar tarefas com título e categoria (formulário controlado).
+- Listar tarefas com renderização via `map()` e `key` estável.
+- Marcar/desmarcar tarefa como concluída.
+- Remover tarefas e limpar concluídas.
+- Filtrar por status (todas, ativas, concluídas) e buscar por título/categoria.
+- Contadores (total, ativas, concluídas).
+- Persistência no `localStorage` (carregamento e salvamento com `useEffect`).
+- Estados de UI: carregamento, lista vazia, sem resultados para filtro/busca e mensagens de erro.
+- Layout responsivo.
 
 ## Conceitos aplicados
-- [ ] Componentes funcionais e JSX
-- [ ] Estado com `useState`
-- [ ] Eventos (`onClick`, `onChange`, `onSubmit`)
-- [ ] Formulários controlados
-- [ ] Efeitos com `useEffect` (fetch, `localStorage` ou sincronização)
-- [ ] Listas com `map()` e `key` estável
-- [ ] Renderização condicional (loading, vazio, erro, filtros)
+- **Componentes funcionais e JSX:** `App` e estrutura declarativa.
+- **`useState`:** tarefas, campos do formulário, filtro, busca, loading e erro.
+- **Eventos:** `onSubmit`, `onChange`, `onClick`.
+- **Formulário controlado:** inputs/select vinculados ao estado.
+- **`useEffect`:** carregar tarefas do `localStorage` na montagem e persistir alterações.
+- **Listas e keys:** `tarefasFiltradas.map(...)` com `key={tarefa.id}`.
+- **Renderização condicional:** carregando, vazio, sem resultados e alertas.
 
-## Requisitos da atividade
-- [ ] Criar/estruturar projeto com Vite + React
-- [ ] Implementar interações e gerenciamento de dados dinâmicos
-- [ ] Consumir/exibir dados (API ou mock) ou persistir dados localmente
-- [ ] Estilização e responsividade básica
-- [ ] README completo (descrição, funcionalidades, como executar, links)
-- [ ] Deploy na Vercel
+## Tecnologias
+- React 19, Vite 5, JavaScript (ESM), CSS
 
 ## Como executar
 ```bash
@@ -31,18 +35,25 @@ npm install
 npm run dev
 ```
 
-## Build
+## Build e preview
 ```bash
 npm run build
 npm run preview
 ```
 
-## Funcionalidades
-- (descrever funcionalidades implementadas)
+## Estrutura
+```text
+.
+├─ index.html
+├─ vite.config.js
+├─ vercel.json
+└─ src/
+   ├─ main.jsx
+   ├─ index.css
+   ├─ App.jsx
+   └─ App.css
+```
 
 ## Links
-- **Deploy (Vercel):** (adicionar após publicação)
-- **Repositório da disciplina:** [senai_framework_frontend](https://github.com/jenifferCamar/senai_framework_frontend)
-
----
-*Status: repositório criado — implementação pendente.*
+- Deploy: https://atividade-projeto-react-02.vercel.app
+- Repositório da disciplina: [senai_framework_frontend](https://github.com/jenifferCamar/senai_framework_frontend)
